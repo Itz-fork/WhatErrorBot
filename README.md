@@ -14,9 +14,8 @@ _config file can be found at: [config.ts](What/config.ts)_
 After deploying the app, wait for app to run for the first time. In the first
 run it'll add all errors to the `WhatErrorBot_DB` database collection.
 
-
 ### Create a search index
-- Now navigate to search tab of the mongodb cluster
+- Navigate to search tab of the mongodb cluster
   - ![search tab](images/mongodb_search_tab.png "Search tab of the mongodb cluster")
 - Click on "CREATE INDEX" button
 - Select "JSON Editor"
@@ -36,10 +35,10 @@ run it'll add all errors to the `WhatErrorBot_DB` database collection.
       }
   }
   ```
-- Save and wait for few minutes
+- Save and wait for few minutes to create a searchable index
 
 Done!
 
 
 # License
-MIT
+Licensed under [MIT](License)
