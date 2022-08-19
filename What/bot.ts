@@ -20,7 +20,7 @@ I can help you to search for telegram api errors and get information about them!
   `,
 		{
 			reply_markup: new InlineKeyboard()
-				.switchInlineCurrent('Search for errors ⚡')
+				.switchInlineCurrent('Quick Search ⚡')
 				.switchInline('Search for errors 🔎'),
 			parse_mode: 'HTML',
 		},
