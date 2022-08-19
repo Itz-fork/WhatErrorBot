@@ -36,7 +36,7 @@ WhatErrBot.inlineQuery(/[a-z|A-Z]+/, async (ctx) => {
 		await ctx.answerInlineQuery(
 			[],
 			{
-				cache_time: 10,
+				cache_time: 5,
 				switch_pm_text: 'Need more than 3 characters to search',
 				switch_pm_parameter: 'start',
 			},
@@ -89,7 +89,7 @@ ${api_methods}
 		// @ts-ignore fuck this
 		inline_results,
 		{
-			cache_time: 15,
+			cache_time: 10,
 			switch_pm_text: `Found ${inline_results.length} results!`,
 			switch_pm_parameter: 'start',
 		},
