@@ -11,7 +11,6 @@ const erros_col = db.collection<DBSchema>("WhatErrorBot_DB");
 
 // Index data
 async function index_data() {
-  console.log("[+] Indexing telegram erros list");
   const edata = await scrape_tg_errors(whatconf.error_file);
   await erros_col.deleteMany({});
   // @ts-ignore No shit

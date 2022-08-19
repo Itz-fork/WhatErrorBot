@@ -76,5 +76,9 @@ WhatErrBot.inlineQuery(/[a-z|A-Z]+/, async (ctx) => {
   );
 });
 
+
+// Start functions
+console.log("[+] Indexing telegram erros list");
 await index_data();
+console.log("[+] Starting the bot");
 await WhatErrBot.start();
