@@ -69,4 +69,4 @@ Licensed under [MIT](License)
 
 
 
-[1] - This bot doesn't support on-premises text search.
+[1]: This bot doesn't support on-premises text search.
