@@ -1,15 +1,16 @@
 // Copyright (c) 2022 Itz-fork
 
-import { MongoClient } from 'https://deno.land/x/mongo@v0.31.0/mod.ts';
-import whatconf from './config.ts';
-import { DBSchema } from './utils/interfaces.ts';
-import scrape_tg_errors from './utils/scraper.ts';
+import { MongoClient } from "https://deno.land/x/mongo@v0.31.0/mod.ts";
+
+import whatconf from "../config.ts";
+import { DBSchema } from "./interfaces.ts";
+import scrape_tg_errors from "./scraper.ts";
 
 // Mongodb client
 const client = new MongoClient();
 await client.connect(whatconf.mongodb_url);
-const db = client.database('WhatsErrorBot');
-const erros_col = db.collection<DBSchema>('WhatErrorBot_DB');
+const db = client.database("WhatsErrorBot");
+const erros_col = db.collection<DBSchema>("WhatErrorBot_DB");
 
 // Index data
 async function index_data() {
@@ -25,12 +26,12 @@ async function search_database(query: string) {
 	let results: { [key: number]: DBSchema } = {};
 	const docs = await erros_col.aggregate([
 		{
-			'$search': {
-				'index': 'default',
-				'text': {
-					'query': `${query}`,
-					'path': {
-						'wildcard': '*',
+			"$search": {
+				"index": "default",
+				"text": {
+					"query": `${query}`,
+					"path": {
+						"wildcard": "*",
 					},
 				},
 			},

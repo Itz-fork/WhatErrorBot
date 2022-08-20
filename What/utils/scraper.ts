@@ -3,7 +3,7 @@
 
 async function scrape_tg_errors(url: string) {
 	const resp = await (await fetch(url)).json();
-	// deno-lint-ignore prefer-const
+	// deno-lint-ignore prefer-const ban-types
 	let erros_list: Array<object> = [];
 
 	// Iter through the values of erros key and collect them in erros object
