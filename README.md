@@ -29,7 +29,7 @@ deno run --allow-net --allow-env What/bot.ts
 
 # ToDo after deploy
 After deploying the app, wait for it to run for the first time. In the first
-run it'll add all errors to the `WhatErrorBot_DB` database collection.
+run it'll add all errors to the `WhatErrorBot_DB` database collection. After that you can [create a search index](#create-a-search-index) for `WhatsErrorBot.WhatErrorBot_DB`
 
 ### Create a search index
 The search feature of this bot is depends entirely on the Mongodb atlas[^1] full text search feature (Based on apache lucene)
@@ -42,7 +42,7 @@ The search feature of this bot is depends entirely on the Mongodb atlas[^1] full
   - ![create index button](images/create_index_btn.png "Create index button")
 - Select "JSON Editor" and click on "Next" button
   - ![select json editor](images/json_editor.png "Select json editor")
-- Paste the following index definition to the json editor
+- Copy and paste the following index definition to the json editor
   ```
   {
       "mappings": {
@@ -60,6 +60,7 @@ The search feature of this bot is depends entirely on the Mongodb atlas[^1] full
   ```
   - ![add index definition](images/json_index_def.png "Add search index definition")
 - Save and wait for the "Status" to change into "Active" state
+  - ![created search index](images/created_search_index.png "Successfully created search index")
 
 Done!
 
@@ -69,4 +70,4 @@ Licensed under [MIT](License)
 
 
 
-[1]: This bot doesn't support on-premises text search.
+[^1]: This bot doesn't support on-premises text search.
