@@ -32,6 +32,8 @@ After deploying the app, wait for it to run for the first time. In the first
 run it'll add all errors to the `WhatErrorBot_DB` database collection.
 
 ### Create a search index
+The search feature of this bot is depends entirely on the Mongodb atlas[^1] full text search feature (Based on apache lucene)
+
 - Click on "Browse Collections"
   - ![browse collections](images/browse_collections.png "Browse database collections")
 - Navigate to search tab of the mongodb cluster
@@ -64,3 +66,7 @@ Done!
 
 # License
 Licensed under [MIT](License)
+
+
+
+[1] - This bot doesn't support on-premises text search.
