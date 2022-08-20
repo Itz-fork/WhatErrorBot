@@ -1,4 +1,5 @@
 // Copyright (c) 2022 Itz-fork
+// NOT OPTIMIZED
 
 import { Bot, InlineKeyboard } from "https://deno.land/x/grammy@v1.10.1/mod.ts";
 

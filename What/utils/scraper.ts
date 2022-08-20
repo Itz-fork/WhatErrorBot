@@ -1,5 +1,6 @@
 // Copyright (c) 2022 Itz-fork
 // I thought I don't do drugs then I saw this code I wrote few weeks ago
+// NOT OPTIMIZED
 
 async function scrape_tg_errors(url: string) {
 	const resp = await (await fetch(url)).json();

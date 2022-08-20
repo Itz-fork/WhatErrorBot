@@ -1,0 +1,33 @@
+{
+    "name": "WhatErrorBot",
+    "description": "Search for telegram api errors and get information about them without telegram",
+    "repository": "https://github.com/Itz-fork/WhatErrorBot",
+    "keywords": [
+        "telegram api errors",
+        "deno",
+        "grammy"
+    ],
+    "website": "https://t.me/NexaBotsUpdates",
+    "success_url": "https://t.me/NexaBotsUpdates",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot api toke from @BotFather",
+            "required": true
+        },
+        "MONGODB_URL": {
+            "description": "Your mongodb srv url from cloud.mongodb.com",
+            "required": true
+        }
+    },
+    "builpacks": [
+        {
+            "url": "https://github.com/chibat/heroku-buildpack-deno.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
