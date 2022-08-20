@@ -7,15 +7,18 @@ import {
 
 // deno-lint-ignore require-await
 async function handle_errors(err: BotError) {
-	const ctx = err.ctx;
-	console.error(`Error while handling update ${ctx.update.update_id}:`);
+	const uid = err.ctx.update.update_id;
 	const e = err.error;
 	if (e instanceof GrammyError) {
-		console.error("Error in request:", e.description);
+		console.error(
+			`ERROR!!! \nUpdate ID: ${uid}\nDescription: ${e.description}`,
+		);
 	} else if (e instanceof HttpError) {
-		console.error("Could not contact Telegram:", e);
+		console.error(
+			`ERROR!!! \nUpdate ID: ${uid}\nDescription: Could not contact Telegram due to ${e}`,
+		);
 	} else {
-		console.error("Unknown error:", e);
+		console.error(`ERROR!!! \nUpdate ID: ${uid}\nDescription: ${e}`);
 	}
 }
 

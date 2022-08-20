@@ -18,7 +18,7 @@ Deploying is easy af!
 ![deploy to heroku](https://www.herokucdn.com/deploy/button.svg "Deploy WhatErrorBot to heroku")
 
 ### Self-hosting
-> _To run this bot, you need to install [deno](http://deno.land/) runtime in your system first._
+> _To run this bot, you need to install [deno](http://deno.land/) runtime in your system._
 
 ```bash
 git clone https://github.com/Itz-fork/WhatErrorBot.git
@@ -28,7 +28,7 @@ deno run --allow-net --allow-env What/bot.ts
 
 
 # ToDo after deploy
-After deploying the app, wait for app to run for the first time. In the first
+After deploying the app, wait for it to run for the first time. In the first
 run it'll add all errors to the `WhatErrorBot_DB` database collection.
 
 ### Create a search index

@@ -17,11 +17,11 @@ WhatErrBot.on("message:text", async (ctx) => {
 		`
 Hi, I'm <b>What Error Bot</b>!
 
-I can help you to search for telegram api errors and get information about them!
+I can help you to search and get information about telegram api errors them without leaving telegram!
   `,
 		{
 			reply_markup: new InlineKeyboard()
-				.switchInlineCurrent("Quick Search ⚡")
+				.switchInlineCurrent("Quick Search ⚡").row()
 				.switchInline("Search for errors 🔎"),
 			parse_mode: "HTML",
 		},
