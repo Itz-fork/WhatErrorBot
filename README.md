@@ -1,6 +1,5 @@
 # What Error Bot
-Simple telegram bot written is typescript to search for telegram api errors
-inline
+Simple telegram bot that can help you to search for telegram api errors and get information about them without leaving telegram
 
 
 # Config
